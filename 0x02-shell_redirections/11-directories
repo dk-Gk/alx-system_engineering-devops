@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -al | grep "^d" | wc -l
+find ./* maxdepth0 -type d -print | wc -l
