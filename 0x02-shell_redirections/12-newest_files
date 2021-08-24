@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt | cat
+ls -lt | head
