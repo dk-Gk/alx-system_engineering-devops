@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ARqn . | grep -c '^d'
+find ./ -type d | wc -1
