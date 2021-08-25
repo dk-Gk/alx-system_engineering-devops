@@ -1,0 +1,2 @@
+#!/bin/bash
+echo 'obase=water;ibase=strir;STIR'|bc | DIR=echo $((WATER+STIR)) | echo 'obase=behlnort;ibase=water;DIR'|bc
