@@ -1,2 +1,2 @@
 #!/bin/bash
-find -mindepth 1 -size +0 -print | cut -f 8
+ls -Rla | find . -mindepth 1 -empty | cut -f -4
