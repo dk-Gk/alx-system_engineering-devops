@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' {1..99..2}
+paste - - | cut -f 1
