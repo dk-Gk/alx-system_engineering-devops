@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Rla | find . -mindepth 1 -empty | cut -f -9 | ls -l
+ls -Rla | find . -mindepth 1 -empty
