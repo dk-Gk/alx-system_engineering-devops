@@ -8,8 +8,8 @@ sudo mkdir -p /var/www/html
 sudo chmod -R 755 /var/www
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 sudo sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
-echo "Ceci n'est pas une page" > /var/www/html/404.html
-sudo sed -i '/server_name _;/a error_page 404 /404.html;location = /404.html { ~/var/www/html/\ninternal;}' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page \n" > /var/www/html/404.html
+sudo sed -i '/server_name _;/a error_page 404 /404.html;\nlocation = /404.html {\n ~/var/www/html/\ninternal;\n}' /etc/nginx/sites-available/default
 if [ "$(pgrep -c nginx)" -le 0 ]; then
     sudo service nginx start
 else
