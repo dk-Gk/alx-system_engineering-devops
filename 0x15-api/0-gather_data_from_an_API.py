@@ -10,8 +10,8 @@ if __name__ == "__main__":
     NUMBER_OF_DONE_TASKS = TOTAL_NUMBER_OF_TASKS = 0
     titles = []
     id = sys.argv[1]
-    api_url = f"https://jsonplaceholder.typicode.com/todos/"
-    api_url2 = f"https://jsonplaceholder.typicode.com/users/{id}"
+    api_url = "https://jsonplaceholder.typicode.com/todos/"
+    api_url2 = "https://jsonplaceholder.typicode.com/users/" + id
     todos = requests.get(api_url)
     name = requests.get(api_url2)
     todos = todos.json()
