@@ -2,14 +2,13 @@
 """Python script that, using this REST API, for a given employee ID,
  returns information about his/her TODO list progress."""
 
-import requests
-import sys
-
-
-NUMBER_OF_DONE_TASKS = TOTAL_NUMBER_OF_TASKS = 0
-titles = []
 
 if __name__ == "__main__":
+    import requests
+    import sys
+
+    NUMBER_OF_DONE_TASKS = TOTAL_NUMBER_OF_TASKS = 0
+    titles = []
     id = sys.argv[1]
     api_url = f"https://jsonplaceholder.typicode.com/todos/"
     api_url2 = f"https://jsonplaceholder.typicode.com/users/{id}"
