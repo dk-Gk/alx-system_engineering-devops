@@ -21,12 +21,12 @@ if __name__ == "__main__":
     Userid = name["id"]
 
     for i in range(len(todos)):
-        if todos[i][ "userId"] == int(id):
+        if todos[i]["userId"] == int(id):
             TOTAL_NUMBER_OF_TASKS += 1
-            if todos[i]["completed"] == True:
+            if todos[i]["completed"]:
                 NUMBER_OF_DONE_TASKS += 1
-                titles.append(todos[i][ "title"])
+                titles.append(todos[i]["title"])
     print(f"Employee {EMPLOYEE_NAME} is done with tasks", end=" ")
     print(f"({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS})")
     for title in titles:
-        print("\t "+ title)
+        print("\t " + title)

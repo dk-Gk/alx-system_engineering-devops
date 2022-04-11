@@ -16,12 +16,12 @@ if __name__ == "__main__":
 
     for n in name:
         ut = [todo for todo in todos
-                      if todo.get('userId') == n.get('id')]
+              if todo.get('userId') == n.get('id')]
         ut = [{'username': n.get('username'),
-                       'task': todo.get('title'),
-                       'completed': todo.get('completed')}
-                      for todo in ut]
+               'task': todo.get('title'),
+               'completed': todo.get('completed')}
+              for todo in ut]
         js_file[str(n.get('id'))] = ut
-            
+
     with open('todo_all_employees.json', 'w') as f:
         json.dump(js_file, f)

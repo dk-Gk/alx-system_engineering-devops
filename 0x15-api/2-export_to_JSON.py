@@ -9,7 +9,7 @@ import json
 if __name__ == "__main__":
     id = sys.argv[1]
     js_file = {str(id): []}
-    file_name = id +".json"
+    file_name = id + ".json"
     api_url = f"https://jsonplaceholder.typicode.com/todos/"
     api_url2 = f"https://jsonplaceholder.typicode.com/users/{id}"
     todos = requests.get(api_url)
@@ -18,12 +18,11 @@ if __name__ == "__main__":
     name = name.json()
     USERNAME = name["username"]
 
-    
     for i in range(len(todos)):
         if todos[i]["userId"] == int(id):
-            js_file[str(id)].append({"task": todos[i][ "title"],
+            js_file[str(id)].append({"task": todos[i]["title"],
                                      "completed": todos[i]["completed"],
                                      "username": USERNAME})
-            
+
     with open(file_name, 'w') as f:
         json.dump(js_file, f)

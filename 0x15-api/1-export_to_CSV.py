@@ -7,7 +7,7 @@ import sys
 
 if __name__ == "__main__":
     id = sys.argv[1]
-    file_name = id +".csv"
+    file_name = id + ".csv"
     api_url = f"https://jsonplaceholder.typicode.com/todos/"
     api_url2 = f"https://jsonplaceholder.typicode.com/users/{id}"
     todos = requests.get(api_url)
@@ -17,9 +17,8 @@ if __name__ == "__main__":
     EMPLOYEE_NAME = name["name"]
     USERNAME = name["username"]
 
-    
     with open(file_name, 'w') as csvfile:
         for i in range(len(todos)):
             if todos[i]["userId"] == int(id):
                 csvfile.write('"{}","{}","{}","{}"\n'.format(
-                    id,USERNAME,todos[i]["completed"],todos[i][ "title"]))
+                    id, USERNAME, todos[i]["completed"], todos[i]["title"]))
