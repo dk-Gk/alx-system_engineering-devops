@@ -9,5 +9,4 @@ do
     else
 	echo "Best School"
     fi
-
 done
