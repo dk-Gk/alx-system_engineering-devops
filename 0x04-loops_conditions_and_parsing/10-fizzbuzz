@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # displays numbers from 1 to 100.
-COUNTER=1
-while [ $((COUNTER++)) -lt 101 ]
+COUNTER=0
+while [ $((COUNTER++)) -lt 100 ]
 do
     if [ $((COUNTER % 15)) = 0 ]
     then
