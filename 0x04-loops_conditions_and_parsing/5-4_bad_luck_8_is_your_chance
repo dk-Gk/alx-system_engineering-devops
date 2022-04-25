@@ -2,7 +2,7 @@
 # displays Best School 10 times.
 
 COUNTER=1
-while [ $COUNTER -lt 11 ]
+while [ $((++COUNTER)) -lt 11 ]
 do
     if [ $COUNTER = 4 ]
     then
@@ -13,5 +13,5 @@ do
     else
 	echo "Best School"
     fi
-    let COUNTER+=1
+
 done
